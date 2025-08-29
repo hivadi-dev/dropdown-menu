@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(39, 174, 96);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.881);
+    margin: 100px auto 20px;
+}
+
+ul {
+    /* border: 1px solid green; */
+    display: flex;
+    margin: 0 auto;
+    width: 35%;
+    height: 50px;
+    background-color: rgb(30, 132, 73);
+    position: relative;
+
+
+    >li {
+        list-style-type: none;
+        width: 25%;
+        height: 100%;
+        /* border-right: 1px solid red; */
+
+        &:hover {
+            background-color: rgb(155, 89, 182);
+
+            >ul {
+                opacity: 1;
+                visibility: visible;
+
+            }
+        }
+
+        >a {
+            /* background-color: yellow; */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.888);
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+        >ul {
+            width: 250px;
+            height: 150px;
+            display: flex;
+            /* align-items:start; */
+            position: absolute;
+            top: 100%;
+
+            flex-direction: column;
+            /* justify-content: flex-start; */
+            background-color: rgb(155, 89, 182);
+            opacity: 0;
+            visibility: hidden;
+
+            >li {
+                width: 100%;
+                height: 100%;
+                /* border: 1px solid yellow; */
+
+                &:hover {
+                    background-color: rgb(139, 79, 163);
+                }
+
+                >a {
+                    display: flex;
+                    justify-content: start;
+                    font-weight: 100;
+                    color: rgba(255, 255, 255, 0.888);
+                    font-size: 18px;
+                    padding-left: 10px;
+
+                }
+            }
+        }
+    }
+}
